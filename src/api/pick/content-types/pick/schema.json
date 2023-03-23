@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "picks",
+  "info": {
+    "singularName": "pick",
+    "pluralName": "picks",
+    "displayName": "picks",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PickTitel": {
+      "type": "string",
+      "default": "null"
+    },
+    "Steckbrief": {
+      "type": "text",
+      "default": "null"
+    },
+    "Slug": {
+      "type": "uid",
+      "default": "null"
+    },
+    "stadtteile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::stadtteil.stadtteil",
+      "inversedBy": "picks"
+    },
+    "Bild": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "shortTitle": {
+      "type": "string"
+    }
+  }
+}
